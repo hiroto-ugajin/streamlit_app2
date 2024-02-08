@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.text('あなたのことを、教えてください。')
+st.text('あなたのことを、教えてください。情報は収集していません。下段に私からの挨拶が返信されるだけです。')
 
 with st.form(key = 'profile_form'):
     name = st.text_input("名前")
@@ -22,7 +22,7 @@ with st.form(key = 'profile_form'):
     cancel_btn = st.form_submit_button("キャンセル")
 
     if submit_btn :      
-        st.text(f"ようこそ、{name}さん、ようこそお越し下さいました。{address}は素敵なところですネ😆")
+        st.text(f"ようこそ、{name}さん。よくお越し下さいました。{address}は素敵なところですネ😆")
         st.text(f"年齢層：{age_category}")
         st.text(f"性別：{sex}")
         st.text(f'趣味：{", ".join(hobby)}')
